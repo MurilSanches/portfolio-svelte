@@ -1,4 +1,10 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"$schema": "https://inlang.com/schema/inlang-message-format",	
+	"home_description": "Creative software engineer with more than +4 years of experience in enterprise companies and startups.",
+	"home_description_bottom": "Proficient in React, Next, Svelte<br />Passionate about UI/UX.",
+	"menu_about": "About me",
+	"menu_projects": "Portfolio",
+	"menu_experience": "Experience",
+	"menu_education": "Education",
+	"menu_skills": "Skills"
 }

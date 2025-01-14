@@ -1,4 +1,10 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from pt-br!"
+	"home_description": "Engenheiro de software criativo com mais de 4 anos de experiência em empresas de grande porte e startups.",
+	"home_description_bottom": "Proficiente em React, Next, Svelte<br />Apaixonado por UI/UX.",
+	"menu_about": "Sobre",
+	"menu_projects": "Projetos",
+	"menu_experience": "Experiência",
+	"menu_education": "Educação",
+	"menu_skills": "Habilidades"
 }
