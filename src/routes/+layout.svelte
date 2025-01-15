@@ -5,6 +5,9 @@
 
 	import { onMount } from 'svelte';
 
+	import Header from '../components/Header.svelte';
+	import Footer from '../components/Footer.svelte';
+
 	import '../app.css';
 
 	onMount(() => {
@@ -17,5 +20,11 @@
 </script>
 
 <ParaglideJS {i18n}>
-	{@render children()}
+	<div class="flex h-screen flex-col">
+		<Header />
+		<div class="flex-1 bg-white dark:bg-black-dark">
+			{@render children()}
+		</div>
+		<Footer />
+	</div>
 </ParaglideJS>

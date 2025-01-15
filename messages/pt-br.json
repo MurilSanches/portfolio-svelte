@@ -5,6 +5,7 @@
 	"menu_about": "Sobre",
 	"menu_projects": "Projetos",
 	"menu_experience": "Experiência",
-	"menu_education": "Educação",
-	"menu_skills": "Habilidades"
+	"menu_contact": "Contatos",
+	"menu_skills": "Habilidades",
+	"copyright": "Feito por {name}. Todos os direitos reservados."
 }
