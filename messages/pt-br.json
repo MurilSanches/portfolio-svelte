@@ -1,11 +1,26 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"home_description": "Engenheiro de software criativo com mais de 4 anos de experiência em empresas de grande porte e startups.",
-	"home_description_bottom": "Proficiente em React, Next, Svelte<br />Apaixonado por UI/UX.",
+	"about_description": "Desenvolvedor Front-end com mais de 4 anos de experiência. Apaixonado por resolver desafios complexos com soluções inovadoras e eficientes, sempre focado na entrega de projetos de alto desempenho e impacto.",			
 	"menu_about": "Sobre",
 	"menu_projects": "Projetos",
 	"menu_experience": "Experiência",
+	"menu_education": "Educação",
 	"menu_contact": "Contatos",
 	"menu_skills": "Habilidades",
+	"portfolio_title": "Portfólio",
+	"portfolio_next_desc": "Uma PoC para treinar o Next.js, com foco em requisições do lado do servidor e do cliente.",
+	"portfolio_poizoni_desc": "Aplicativo para identificar animais peçonhentos e indicar a melhor maneira de tratá-los.",
+	"experience_title": "Experiência",
+	"experience_1_desc": "Desenvolvimento front-end em React JS/TS, Vite e NEXT JS. Suporte à equipe de estagiários.",
+	"experience_1_key_1": "Desenvolver interfaces web responsivas e dinâmicas utilizando React, Next.js, TypeScript, Redux e Axios.",
+	"experience_1_key_2": "Criar e manter testes unitários com Jest e Vitest, garantindo a qualidade do código e a estabilidade funcional.",
+	"experience_1_key_3": "Contribuir no planejamento de projetos e definição de etapas, apoiando a priorização de tarefas e monitoramento do progresso.",
+	"experience_1_achievements_1": "Migrado um projeto de Node.js 12 e Create React App (CRA) para Node.js 18 e Vite.",
+	"experience_1_achievements_2": "Projetado, desenvolvido e implantado um projeto utilizando Next.js e Tailwind CSS.",
+	"experience_2_desc": "Trabalhei como desenvolvedor front-end na linguagem React JS, em um dos projetos da Alelo.",
+	"education_title": "Educação",
+	"skills_title": "Habilidades",
+	"contact_title": "Contato",
 	"copyright": "Feito por {name}. Todos os direitos reservados."
 }
+	

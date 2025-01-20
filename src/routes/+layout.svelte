@@ -20,7 +20,7 @@
 </script>
 
 <ParaglideJS {i18n}>
-	<div class="flex h-screen flex-col">
+	<div class="relative flex h-full flex-col">
 		<Header />
 		<div class="flex-1 bg-white dark:bg-black-dark">
 			{@render children()}

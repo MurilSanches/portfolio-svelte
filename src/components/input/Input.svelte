@@ -1,26 +1,20 @@
 <script>
-	import { ValidationMessage } from '@felte/reporter-svelte';
-	import { createField } from 'felte';
+	const { name = '', type = 'text', value = '', placeholder = '', errors = false } = $props();
 
-	const { name, placeholder = '' } = $props();
-
-	const { field } = createField(name);
+	let errorClass = $derived(errors ? 'error' : '');
 </script>
 
-<ValidationMessage for={name} level="error" let:messages={message}>
+<div class="relative">
 	<input
-		use:field
+		{name}
+		{type}
+		{value}
+		{placeholder}
 		id={name}
 		aria-labelledby={name}
-		type="text"
-		{placeholder}
-		class="w-full rounded border border-gray-300 p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-		class:error={message}
-		data-felte-reporter-tippy-position-for={name}
-		data-felte-reporter-tippy-trigger-for={name}
+		class="w-full rounded border border-gray-300 p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 {errorClass}"
 	/>
-	<span class="mt-2 text-sm text-red-600">{message || ''}</span>
-</ValidationMessage>
+</div>
 
 <style lang="css">
 	.error {

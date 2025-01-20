@@ -1,6 +1,4 @@
 <script>
-	// @ts-nocheck
-
 	import * as m from '$lib/paraglide/messages.js';
 	import { darkMode } from '$lib/stores/darkMode';
 
@@ -10,27 +8,31 @@
 	let bornfire = '/bornfire.png';
 	let light_bornfire = '/bornfire_light.gif';
 
+	let USAFlag = '/flags/USA.png';
+	let BRFlag = '/flags/Brazil.png';
+
 	let menu_items = [
 		{ id: 'about', label: m.menu_about },
 		{ id: 'portfolio', label: m.menu_projects },
 		{ id: 'experience', label: m.menu_experience },
+		{ id: 'education', label: m.menu_education },
 		{ id: 'skills', label: m.menu_skills },
 		{ id: 'contact', label: m.menu_contact }
 	];
 
+	/**
+	 * @param {string} sectionId
+	 */
 	function scrollToSection(sectionId) {
 		const section = document.getElementById(sectionId);
 		if (section) {
 			section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	}
-
-	let USAFlag = '/flags/USA.png';
-	let BRFlag = '/flags/Brazil.png';
 </script>
 
 <header
-	class="sticky top-0 z-10 flex items-center justify-between bg-blue-extraLight px-8 py-4 shadow-md dark:bg-gray-dark"
+	class="sticky top-0 z-[100] flex items-center justify-between bg-blue-extraLight px-8 py-4 shadow-md dark:bg-gray-dark"
 >
 	<button
 		class="text-2xl font-bold text-white dark:text-gray-300"
