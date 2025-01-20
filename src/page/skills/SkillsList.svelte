@@ -1,7 +1,7 @@
 <script>
 	import { Icon } from 'svelte-icons-pack';
 
-	import { skills } from '../../constants/skills';
+	import { skills } from '../../data/skills';
 </script>
 
 <div class="grid grid-cols-3 gap-8 md:grid-cols-3 lg:grid-cols-4">

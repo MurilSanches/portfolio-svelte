@@ -1,11 +1,12 @@
 <script>
+	import Menu from 'lucide-svelte/icons/menu';
 	import { darkMode } from '$lib/stores/darkMode';
 
 	import { switchToLanguage } from '../utils/switchToLanguage';
-	import { Languages } from '../constants/languages';
+	import { LANGUAGES } from '../constants/languages';
 	import MobileMenu from './menu/MobileMenu.svelte';
-	import { menu_items } from '../constants/menu';
-	import { scrollToSection } from '../helper/menu';
+	import { menu_items } from '../data/menu';
+	import { scrollToSection } from '../helpers/menu';
 	import MenuOverlay from './menu/MenuOverlay.svelte';
 
 	let bornfire = '/bornfire.png';
@@ -18,7 +19,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-[80] flex items-center justify-between bg-blue-extraLight px-4 py-2 shadow-md dark:bg-gray-dark md:px-8 md:py-4"
+	class="sticky top-0 z-[80] flex items-center justify-between bg-blue-extraLight px-8 py-2 shadow-md dark:bg-gray-dark md:py-4"
 >
 	<!-- Dark Mode Toggle -->
 	<button
@@ -37,7 +38,7 @@
 		class="block h-6 w-6 text-blue-light dark:text-blue-extraLight md:hidden"
 		onclick={() => (isMenuOpen = !isMenuOpen)}
 	>
-		<img src="/menu.svg" alt="Icone do menu" />
+		<Menu class="h-6 w-6" />
 	</button>
 
 	<!-- Navigation Menu (Desktop) -->
@@ -59,10 +60,10 @@
 		>
 			Resume
 		</button>
-		<button onclick={() => switchToLanguage(Languages.EN)} type="button">
+		<button onclick={() => switchToLanguage(LANGUAGES.EN)} type="button">
 			<img src={USAFlag} alt="Bandeira USA" class="h-6 w-8" />
 		</button>
-		<button onclick={() => switchToLanguage(Languages.PT_BR)} type="button">
+		<button onclick={() => switchToLanguage(LANGUAGES.PT_BR)} type="button">
 			<img src={BRFlag} alt="Bandeira Brazil" class="h-6 w-8" />
 		</button>
 	</div>

@@ -1,7 +1,7 @@
 /**
  * @type {{ PT_BR: "pt-br", EN: "en" }}
  */
-export const Languages = {
+export const LANGUAGES = {
     PT_BR: "pt-br",
     EN: "en",	
 }

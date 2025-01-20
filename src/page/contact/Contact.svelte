@@ -4,7 +4,7 @@
 
 	import * as m from '$lib/paraglide/messages.js';
 
-	import { social } from '../../constants/social';
+	import { social } from '../../data/social';
 	import ContactForm from './ContactForm.svelte';
 </script>
 

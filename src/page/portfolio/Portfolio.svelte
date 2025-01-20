@@ -1,13 +1,13 @@
 <script>
-	import TrendingDown from 'lucide-svelte/icons/trending-down';
+	import ExternalLink from 'lucide-svelte/icons/external-link';
 
 	import * as m from '$lib/paraglide/messages.js';
 
-	import { projects } from '../../constants/projects';
+	import { projects } from '../../data/projects';
 	import PortfolioCarousel from './PortfolioCarousel.svelte';
 </script>
 
-<section id="portfolio" class="flex flex-col gap-y-16">
+<section id="portfolio" class="flex flex-col gap-y-8">
 	<h1 class="text-4xl font-extrabold">
 		<span class="text-cyan-600">{m.portfolio_title()}</span>
 	</h1>
@@ -43,10 +43,10 @@
 							href={project.repo}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex w-28 gap-x-2 rounded-md bg-cyan-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-cyan-500"
+							class="flex w-28 items-center gap-x-2 rounded-md bg-cyan-600 px-4 py-2 text-sm font-medium uppercase text-white shadow hover:bg-cyan-500"
 						>
 							Acessar
-							<TrendingDown />
+							<ExternalLink class="" />
 						</a>
 					</div>
 				</div>

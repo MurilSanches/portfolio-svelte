@@ -1,10 +1,10 @@
 <script>
-	import { experience } from '../../constants/experience';
+	import { experience } from '../../data/experience';
 
 	import * as m from '$lib/paraglide/messages.js';
 </script>
 
-<section id="experience" class="flex flex-col gap-y-16">
+<section id="experience" class="flex flex-col gap-y-8">
 	<h1 class="text-4xl font-extrabold">
 		<span class="text-cyan-600">{m.experience_title()}</span>
 	</h1>

@@ -3,7 +3,7 @@
 	import * as m from '$lib/paraglide/messages.js';
 
 	import { darkMode } from '$lib/stores/darkMode';
-	import { social } from '../constants/social';
+	import { social } from '../data/social';
 
 	let currentYear = new Date().getFullYear();
 </script>

@@ -7,9 +7,11 @@
 	"menu_education": "Education",
 	"menu_contact": "Contact me",
 	"menu_skills": "Skills",
+
 	"portfolio_title": "Portfolio",
 	"portfolio_next_desc": "A PoC to practice Next.js, focusing on server-side and client-side requests.",
 	"portfolio_poizoni_desc": "Application to identify venomous animals and suggest the best way to handle them.",
+
 	"experience_title": "Work Experience",
 	"experience_1_desc": "Front-end development using React JS/TS, Vite, and NEXT JS. Support for the intern team.",
 	"experience_1_key_1": "Develop responsive and dynamic web interfaces using React, Next.js, TypeScript, Redux, and Axios.",
@@ -18,8 +20,15 @@
 	"experience_1_achievements_1": "Migrated a project from Node.js 12 and Create React App (CRA) to Node.js 18 and Vite.",
 	"experience_1_achievements_2": "Designed, developed, and deployed a project using Next.js and Tailwind CSS.",
 	"experience_2_desc": "Worked as a front-end developer using React JS in one of Alelo's projects.",
+
 	"education_title": "Education",
+	"education_1_course": "Information Systems",
+	"education_2_course": "High School and Technical Education in Computer Science",
+
 	"skills_title": "Skills",
+
 	"contact_title": "Contact me",
+	
+
 	"copyright": "Made by {name}. All rights reserved."
 }

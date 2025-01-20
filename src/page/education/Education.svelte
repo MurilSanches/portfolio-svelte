@@ -1,10 +1,10 @@
 <script>
-	import { education } from '../../constants/education';
+	import { education } from '../../data/education';
 
 	import * as m from '$lib/paraglide/messages.js';
 </script>
 
-<section id="education" class="flex flex-col gap-y-16">
+<section id="education" class="flex flex-col gap-y-8">
 	<h1 class="text-4xl font-extrabold">
 		<span class="text-cyan-600">{m.education_title()}</span>
 	</h1>
@@ -19,7 +19,7 @@
 						<p class="text-gray-500">{item.start} - Atual</p>
 					{/if}
 				</div>
-				<p class="text-gray-400">{item.course}</p>
+				<p class="text-gray-400">{item.course()}</p>
 			</div>
 		{/each}
 	</div>

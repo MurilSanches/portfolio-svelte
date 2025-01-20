@@ -7,9 +7,11 @@
 	"menu_education": "Educação",
 	"menu_contact": "Contatos",
 	"menu_skills": "Habilidades",
+	
 	"portfolio_title": "Portfólio",
 	"portfolio_next_desc": "Uma PoC para treinar o Next.js, com foco em requisições do lado do servidor e do cliente.",
 	"portfolio_poizoni_desc": "Aplicativo para identificar animais peçonhentos e indicar a melhor maneira de tratá-los.",
+
 	"experience_title": "Experiência",
 	"experience_1_desc": "Desenvolvimento front-end em React JS/TS, Vite e NEXT JS. Suporte à equipe de estagiários.",
 	"experience_1_key_1": "Desenvolver interfaces web responsivas e dinâmicas utilizando React, Next.js, TypeScript, Redux e Axios.",
@@ -18,7 +20,11 @@
 	"experience_1_achievements_1": "Migrado um projeto de Node.js 12 e Create React App (CRA) para Node.js 18 e Vite.",
 	"experience_1_achievements_2": "Projetado, desenvolvido e implantado um projeto utilizando Next.js e Tailwind CSS.",
 	"experience_2_desc": "Trabalhei como desenvolvedor front-end na linguagem React JS, em um dos projetos da Alelo.",
+
 	"education_title": "Educação",
+	"education_1_course": "Sistema de informação",
+	"education_2_course": "Ensino médio e técnico em informática",
+
 	"skills_title": "Habilidades",
 	"contact_title": "Contato",
 	"copyright": "Feito por {name}. Todos os direitos reservados."
