@@ -1,7 +1,7 @@
 /**
  * @param {string} id
  */
-export function scrollToSection (id, offset = -60) {
+export function scrollToSection (id, offset = -80) {
     const element = document.getElementById(id);
     if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.scrollY + offset;
