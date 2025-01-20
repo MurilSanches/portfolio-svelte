@@ -1,9 +1,12 @@
 <script>
-	import * as m from '$lib/paraglide/messages.js';
 	import { darkMode } from '$lib/stores/darkMode';
 
 	import { switchToLanguage } from '../utils/switchToLanguage';
 	import { Languages } from '../constants/languages';
+	import MobileMenu from './menu/MobileMenu.svelte';
+	import { menu_items } from '../constants/menu';
+	import { scrollToSection } from '../helper/menu';
+	import MenuOverlay from './menu/MenuOverlay.svelte';
 
 	let bornfire = '/bornfire.png';
 	let light_bornfire = '/bornfire_light.gif';
@@ -11,29 +14,13 @@
 	let USAFlag = '/flags/USA.png';
 	let BRFlag = '/flags/Brazil.png';
 
-	let menu_items = [
-		{ id: 'about', label: m.menu_about },
-		{ id: 'portfolio', label: m.menu_projects },
-		{ id: 'experience', label: m.menu_experience },
-		{ id: 'education', label: m.menu_education },
-		{ id: 'skills', label: m.menu_skills },
-		{ id: 'contact', label: m.menu_contact }
-	];
-
-	/**
-	 * @param {string} sectionId
-	 */
-	function scrollToSection(sectionId) {
-		const section = document.getElementById(sectionId);
-		if (section) {
-			section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
-	}
+	let isMenuOpen = false;
 </script>
 
 <header
-	class="sticky top-0 z-[100] flex items-center justify-between bg-blue-extraLight px-8 py-4 shadow-md dark:bg-gray-dark"
+	class="sticky top-0 z-[80] flex items-center justify-between bg-blue-extraLight px-4 py-2 shadow-md dark:bg-gray-dark md:px-8 md:py-4"
 >
+	<!-- Dark Mode Toggle -->
 	<button
 		class="text-2xl font-bold text-white dark:text-gray-300"
 		onclick={() => darkMode.toggle()}
@@ -44,7 +31,17 @@
 			<img src={light_bornfire} alt="born fire" class="h-8 w-8" />
 		{/if}
 	</button>
-	<nav class="flex space-x-6">
+
+	<!-- Menu Button (Mobile) -->
+	<button
+		class="block h-6 w-6 text-blue-light dark:text-blue-extraLight md:hidden"
+		onclick={() => (isMenuOpen = !isMenuOpen)}
+	>
+		<img src="/menu.svg" alt="Icone do menu" />
+	</button>
+
+	<!-- Navigation Menu (Desktop) -->
+	<nav class="hidden space-x-6 md:flex">
 		{#each menu_items as item}
 			<button
 				onclick={() => scrollToSection(item.id)}
@@ -54,7 +51,9 @@
 			</button>
 		{/each}
 	</nav>
-	<div class="flex items-center justify-center gap-x-4">
+
+	<!-- Right Section -->
+	<div class="hidden items-center justify-center gap-x-4 md:flex">
 		<button
 			class="rounded-lg bg-gray-dark px-4 py-2 text-white hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-500"
 		>
@@ -68,3 +67,6 @@
 		</button>
 	</div>
 </header>
+
+<MenuOverlay {isMenuOpen} closeMenu={() => (isMenuOpen = false)} />
+<MobileMenu {isMenuOpen} closeMenu={() => (isMenuOpen = false)} />

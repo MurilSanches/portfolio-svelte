@@ -1,4 +1,14 @@
-1 - Mudar source language tag from i18n feito
-2 - Verificar typescript com svelte se faz sentido ou se continua com o jsdoc 
-    - Ajustar arquivos que com erro de typescript
-3 - Ajustar dark mode
+- Ajustar header mobile
+
+ - Ajustar icone e titulo da aba
+
+ - Rever layout com brunao
+
+ - Foto Minha
+ - Mask no campo de telefone
+ - User guide
+
+ - Imagens do POIZONI
+
+
+ - Ajustar SES - Simples Email Sender
