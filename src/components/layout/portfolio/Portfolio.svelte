@@ -3,7 +3,7 @@
 
 	import * as m from '$lib/paraglide/messages.js';
 
-	import { projects } from '../../data/projects';
+	import { projects } from '../../../data/projects';
 	import PortfolioCarousel from './PortfolioCarousel.svelte';
 </script>
 

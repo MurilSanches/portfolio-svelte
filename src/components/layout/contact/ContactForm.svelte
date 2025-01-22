@@ -1,8 +1,8 @@
 <script>
 	import { enhance } from '$app/forms';
 	// @ts-ignore
-	import Input from '../../components/input/Input.svelte';
-	import TextArea from '../../components/input/TextArea.svelte';
+	import Input from '../../input/Input.svelte';
+	import TextArea from '../../input/TextArea.svelte';
 
 	export let form;
 	let submitting = false;

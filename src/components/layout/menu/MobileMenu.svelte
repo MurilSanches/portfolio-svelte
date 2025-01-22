@@ -2,10 +2,10 @@
 	import X from 'lucide-svelte/icons/x';
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 
-	import { menu_items } from '../../data/menu';
-	import { scrollToSection } from '../../helpers/menu';
-	import { switchToLanguage } from '../../utils/switchToLanguage';
-	import { LANGUAGES } from '../../constants/languages';
+	import { menu_items } from '../../../data/menu';
+	import { scrollToSection } from '../../../helpers/menu';
+	import { switchToLanguage } from '../../../utils/switchToLanguage';
+	import { LANGUAGES } from '../../../constants/languages';
 
 	let { isMenuOpen, closeMenu } = $props();
 

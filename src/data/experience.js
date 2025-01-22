@@ -1,6 +1,6 @@
 import * as m from '$lib/paraglide/messages.js';	
 
-export let experience = [
+export let experiences = [
     {
         position: 'Analista de Software Pleno',
         company: 'CI&T',

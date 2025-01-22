@@ -1,12 +1,15 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import Menu from 'lucide-svelte/icons/menu';
 	import { darkMode } from '$lib/stores/darkMode';
 
-	import { switchToLanguage } from '../utils/switchToLanguage';
-	import { LANGUAGES } from '../constants/languages';
+	import { switchToLanguage } from '../../utils/switchToLanguage';
+	import { menu_items } from '../../data/menu';
+	import { scrollToSection } from '../../helpers/menu';
+	import { LANGUAGES } from '../../constants/languages';
+
 	import MobileMenu from './menu/MobileMenu.svelte';
-	import { menu_items } from '../data/menu';
-	import { scrollToSection } from '../helpers/menu';
 	import MenuOverlay from './menu/MenuOverlay.svelte';
 
 	let bornfire = '/bornfire.png';
@@ -16,10 +19,28 @@
 	let BRFlag = '/flags/Brazil.png';
 
 	let isMenuOpen = false;
+	let isScrolled = false;
+
+	// Listener de scroll
+	const handleScroll = () => {
+		isScrolled = window.scrollY > 0;
+	};
+
+	// Adicionar e remover o listener quando o componente monta/desmonta
+	onMount(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <header
-	class="sticky top-0 z-[80] flex items-center justify-between bg-blue-extraLight px-8 py-2 shadow-md dark:bg-gray-dark md:py-4"
+	class="sticky top-0 z-[80] flex items-center justify-between px-8 py-2 transition-all duration-300 md:py-4"
+	class:bg-transparent={!isScrolled}
+	class:bg-blue-extraLight={isScrolled}
+	class:dark:bg-gray-dark={isScrolled}
+	class:shadow-md={isScrolled}
 >
 	<!-- Dark Mode Toggle -->
 	<button
@@ -46,7 +67,10 @@
 		{#each menu_items as item}
 			<button
 				onclick={() => scrollToSection(item.id)}
-				class="text-blue-light hover:text-gray-dark dark:text-blue-extraLight dark:hover:text-blue-light"
+				class="hover:text-gray-dark dark:text-blue-extraLight dark:hover:text-gray-dark"
+				class:text-blue-extraLight={!isScrolled}
+				class:text-blue-light={isScrolled}
+				class:dark:hover:text-cyan-500={isScrolled}
 			>
 				{item.label()}
 			</button>

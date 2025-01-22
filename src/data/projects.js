@@ -23,6 +23,6 @@ export let projects = [
             '/portfolio/next-page-2.png',
             '/portfolio/next-page-3.png'
         ],
-        tags: ['React Native', 'Mobile', 'Geolocalização']
+        tags: ['Flutter', 'Mobile', 'Geolocalização']
     }
 ];

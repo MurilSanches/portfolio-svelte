@@ -1,6 +1,6 @@
 // +page.server.ts
 import { fail } from '@sveltejs/kit';
-import { contactSchema } from '../page/contact/contact.schema.js';
+import { contactSchema } from '../components/layout/contact/contact.schema.js';
 
 export const actions = {
   default: async ({ request }) => {
