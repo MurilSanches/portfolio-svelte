@@ -31,6 +31,8 @@ export const actions = {
       const emailFromPassword = process.env.EMAIL_PASSWORD
       const emailTo = JSON.parse(process.env.EMAIL_TO ?? '') ?? ["murilosanchesp@gmail.com"]
 
+      console.log(emailFrom, emailFromPassword, emailTo)
+
       const transporter = nodemailer.createTransport({
         port: 465,
         host: "smtp.gmail.com",
