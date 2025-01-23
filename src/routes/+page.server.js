@@ -71,7 +71,13 @@ export const actions = {
         html: message
       }
 
-      transporter.sendMail(mailData)
+      transporter.sendMail(mailData,  (err, info) => {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log(info)
+        }
+      })
 
       return {
         success: true,
