@@ -1,5 +1,6 @@
 <script>
 	import * as m from '$lib/paraglide/messages.js';
+	import { languageTag } from '$lib/paraglide/runtime.js';
 
 	import { onMount } from 'svelte';
 
@@ -8,6 +9,7 @@
 
 	import { switchToLanguage } from '../../utils/switchToLanguage';
 	import { menu_items } from '../../data/menu';
+	import { resume } from '../../data/resume';
 	import { scrollToSection } from '../../helpers/menu';
 	import { LANGUAGES } from '../../constants/languages';
 
@@ -75,13 +77,17 @@
 	</nav>
 
 	<div class="hidden items-center justify-center gap-x-4 md:flex">
-		<button
+		<a
 			class="rounded-lg px-4 py-2 text-white hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-500"
 			class:bg-cyan-600={!isScrolled}
 			class:bg-gray-dark={isScrolled}
+			target="_blank"
+			rel="noopener noreferrer"
+			hreflang={LANGUAGES.PT_BR}
+			href={resume[languageTag()]}
 		>
 			{m.header_resume()}
-		</button>
+		</a>
 		<button onclick={() => switchToLanguage(LANGUAGES.EN)} type="button">
 			<img src={USAFlag} alt="Bandeira USA" class="h-6 w-8" />
 		</button>

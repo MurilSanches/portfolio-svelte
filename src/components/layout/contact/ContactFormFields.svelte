@@ -46,7 +46,7 @@
 		name="phone"
 		value={form?.data?.phone ?? ''}
 		errors={!!form?.errors?.phone}
-		placeholder={m.contact_form_email_placeholder()}
+		placeholder={m.contact_form_phone_placeholder()}
 	/>
 	{#if form?.errors?.phone}
 		<span class="mt-2 text-sm text-red-600">{form.errors.phone[0]}</span>

@@ -3,11 +3,15 @@
 	// @ts-ignore
 	import ContactFormFields from './ContactFormFields.svelte';
 
-	/**
-	 * @type {{ data: { name: any; email: any; phone: any; about: any; }; errors: { name: any[]; email: any[]; phone: any[]; about: any[]; server: any; }; } | undefined}
-	 */
-	export let form;
-	let submitting = false;
+	import ErrorModal from '../../modal/ErrorModal.svelte';
+	import SuccessModal from '../../modal/SuccessModal.svelte';
+
+	let form = $state(undefined);
+	let submitting = $state(false);
+
+	let openSuccessModal = $state(false);
+	let openErrorModal = $state(false);
+	let message = $state('');
 
 	const clearForm = () => {
 		if (form) {
@@ -17,18 +21,23 @@
 
 	const handleSubmit = () => {
 		submitting = true;
+		return handleResult;
+	};
 
-		return async ({ result }) => {
-			submitting = false;
-			if (result.type === 'success') {
-				alert('Formulário enviado com sucesso!');
-				clearForm();
-			}
+	const handleResult = async ({ result }) => {
+		form = result.data;
+		submitting = false;
 
-			if (result.type === 'failure') {
-				console.log(result);
-			}
-		};
+		if (result.type === 'success') {
+			message = result.message;
+			openSuccessModal = true;
+			clearForm();
+		}
+
+		if (result.type === 'failure' && result.status === 500) {
+			message = result.message;
+			openErrorModal = true;
+		}
 	};
 </script>
 
@@ -47,4 +56,11 @@
 			{submitting ? 'Enviando...' : 'Enviar'}
 		</button>
 	</div>
+
+	<ErrorModal isOpenModal={openErrorModal} onClose={() => (openErrorModal = false)} />
+	<SuccessModal
+		isOpenModal={openSuccessModal}
+		onClose={() => (openSuccessModal = false)}
+		message=""
+	/>
 </form>

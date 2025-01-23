@@ -39,12 +39,18 @@
 	"contact_title": "Contact me",
 	"contact_form_name": "Name",
 	"contact_form_name_placeholder": "Full name",
+	"contact_form_name_error": "The name is required",
 	"contact_form_email": "E-mail",
 	"contact_form_email_placeholder": "your@email.com",
+	"contact_form_email_error": "Please enter a valid email",
 	"contact_form_phone": "Cellphone",
 	"contact_form_phone_placeholder": "(00) 00000-0000",
 	"contact_form_message": "Subject",
 	"contact_form_message_placeholder": "Describe the subject...",
+	"contact_form_message_error": "The Subject is required",
+
+	"modal_error_title": "Something went wrong :/",
+	"modal_error_default_message": "Please try again later!",
 
 	"scroll_up_message": "Oh, hello. I’ll stay here to enjoy the sun.",
 

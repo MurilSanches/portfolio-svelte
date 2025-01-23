@@ -26,8 +26,17 @@
 	<title>Murilo Portfolio</title>
 	<meta
 		name="description"
-		content="Create a Svelte action that adds easy tooltips to any HTML element."
+		content="Explore Murilo Sanches' portfolio, showcasing cutting-edge web development projects using React, SvelteKit, and more."
 	/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Murilo Sanches | Software Developer Portfolio" />
+	<meta
+		property="og:description"
+		content="Discover more about web development projects by Murilo Sanches."
+	/>
+	<meta property="og:image" content="/og-image.jpg" />
+	<meta property="og:url" content="https://muriloporfolio.com.br" />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <ParaglideJS {i18n}>

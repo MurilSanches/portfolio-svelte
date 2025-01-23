@@ -39,12 +39,18 @@
 	"contact_title": "Contato",
 	"contact_form_name": "Nome",
 	"contact_form_name_placeholder": "Nome Completo",
+	"contact_form_name_error": "O nome é obrigatório",
 	"contact_form_email": "E-mail",
 	"contact_form_email_placeholder": "seu@email.com",
+	"contact_form_email_error": "Insira um e-mail válido",
 	"contact_form_phone": "Telefone",
 	"contact_form_phone_placeholder": "(00) 00000-0000",
 	"contact_form_message": "Assunto",
 	"contact_form_message_placeholder": "Descreva o assunto...",
+	"contact_form_message_error": "O campo assunto é obrigatório",
+
+	"modal_error_title": "Algo deu errado :/",
+	"modal_error_default_message": "Tente novamente mais tarde!",
 
 	"scroll_up_message":"Oh, olá. Eu ficarei aqui, para apreciar o sol.",
 
