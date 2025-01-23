@@ -10,7 +10,7 @@
 	import Background from '../components/layout/background/Background.svelte';
 </script>
 
-<div class="flex flex-col items-center justify-center bg-white dark:bg-black-dark">
+<main class="flex flex-col items-center justify-center bg-white dark:bg-black-dark">
 	<Background />
 	<div class="mt-[90vh] flex w-full flex-col gap-y-16 px-8 pb-16 md:mt-[70vh] md:w-4/5 md:px-0">
 		<About />
@@ -24,4 +24,4 @@
 		<Contact />
 	</div>
 	<ScrollUpIcon />
-</div>
+</main>

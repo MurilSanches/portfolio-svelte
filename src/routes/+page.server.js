@@ -30,15 +30,16 @@ export const actions = {
       const emailFrom = process.env.EMAIL_FROM
       const emailFromPassword = process.env.EMAIL_PASSWORD
       const emailTo = JSON.parse(process.env.EMAIL_TO ?? '') ?? ["murilosanchesp@gmail.com"]
-    
+      
       const transporter = nodemailer.createTransport({
         service: "Gmail",
         host: "smtp.gmail.com",
         port: 465,
         auth: {
-          user: "muriloenviadordeemails@gmail.com",
+          user: emailFrom,
           pass: emailFromPassword
         },
+        pool: true,
         secure: true,
         debug: true,
         logger: true,
@@ -66,7 +67,7 @@ export const actions = {
 
       const mailList = [...emailTo]
       const mailData = {
-        from: "muriloenviadordeemails@gmail.com",
+        from: emailFrom,
         to: mailList,
         subject: subject,
         text: message,
