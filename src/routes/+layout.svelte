@@ -1,8 +1,10 @@
 <script>
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
+
 	import { i18n } from '$lib/i18n';
 	import { darkMode } from '$lib/stores/darkMode';
-	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
+	import Toaster from '$lib/toaster/Toaster.svelte';
 
 	import { onMount } from 'svelte';
 
@@ -40,9 +42,10 @@
 </svelte:head>
 
 <ParaglideJS {i18n}>
-	<div class="relative h-full">
+	<div class="relative h-screen">
 		<Header />
 		{@render children()}
 		<Footer />
+		<Toaster />
 	</div>
 </ParaglideJS>

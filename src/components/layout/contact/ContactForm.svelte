@@ -1,17 +1,13 @@
 <script>
 	import { enhance } from '$app/forms';
 	// @ts-ignore
+	import * as m from '$lib/paraglide/messages.js';
+	import { toast } from '$lib/toaster/toast';
+	import { ToastTypes } from '$lib/toaster/toastTypes';
+
 	import ContactFormFields from './ContactFormFields.svelte';
-
-	import ErrorModal from '../../modal/ErrorModal.svelte';
-	import SuccessModal from '../../modal/SuccessModal.svelte';
-
 	let form = $state(undefined);
 	let submitting = $state(false);
-
-	let openSuccessModal = $state(false);
-	let openErrorModal = $state(false);
-	let message = $state('');
 
 	const clearForm = () => {
 		if (form) {
@@ -29,14 +25,12 @@
 		submitting = false;
 
 		if (result.type === 'success') {
-			message = result.message;
-			openSuccessModal = true;
+			toast.send(result.data.server, ToastTypes.SUCCESS);
 			clearForm();
 		}
 
 		if (result.type === 'failure' && result.status === 500) {
-			message = result.message;
-			openErrorModal = true;
+			toast.send(m.modal_error_default_message(), ToastTypes.ERROR);
 		}
 	};
 </script>
@@ -56,11 +50,4 @@
 			{submitting ? 'Enviando...' : 'Enviar'}
 		</button>
 	</div>
-
-	<ErrorModal isOpenModal={openErrorModal} onClose={() => (openErrorModal = false)} />
-	<SuccessModal
-		isOpenModal={openSuccessModal}
-		onClose={() => (openSuccessModal = false)}
-		message=""
-	/>
 </form>

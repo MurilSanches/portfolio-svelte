@@ -1,19 +1,29 @@
 <script>
-	const { name = '', value = '', placeholder = '', errors = null } = $props();
+	import { imask } from '@imask/svelte';
+
+	const {
+		name = '',
+		type = 'text',
+		value = '',
+		placeholder = '',
+		errors = null,
+		options = { lazy: false, mask: '' }
+	} = $props();
 
 	let errorClass = $derived(!!errors ? 'error' : '');
 </script>
 
 <div class="relative">
-	<textarea
+	<input
 		{name}
+		{type}
 		{value}
 		{placeholder}
 		id={name}
 		aria-labelledby={name}
-		tabindex="0"
-		class="w-full resize-none rounded border border-gray-300 p-2 {errorClass}"
-	></textarea>
+		use:imask={options}
+		class="w-full rounded border border-gray-300 p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 {errorClass}"
+	/>
 </div>
 
 {#if errors}

@@ -1,7 +1,7 @@
 <script>
-	const { name = '', type = 'text', value = '', placeholder = '', errors = false } = $props();
+	const { name = '', type = 'text', value = '', placeholder = '', errors = null } = $props();
 
-	let errorClass = $derived(errors ? 'error' : '');
+	let errorClass = $derived(!!errors ? 'error' : '');
 </script>
 
 <div class="relative">
@@ -15,6 +15,10 @@
 		class="w-full rounded border border-gray-300 p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 {errorClass}"
 	/>
 </div>
+
+{#if errors}
+	<span class="mt-2 text-sm text-red-600">{errors[0]}</span>
+{/if}
 
 <style lang="css">
 	.error {

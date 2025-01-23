@@ -49,6 +49,7 @@
 		"@felte/core": "^1.4.4",
 		"@felte/reporter-svelte": "^1.2.0",
 		"@felte/validator-zod": "^1.0.18",
+		"@imask/svelte": "^7.6.1",
 		"@inlang/paraglide-sveltekit": "^0.11.1",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"@tailwindcss/container-queries": "^0.1.1",

@@ -43,7 +43,7 @@
 	"contact_form_email": "E-mail",
 	"contact_form_email_placeholder": "your@email.com",
 	"contact_form_email_error": "Please enter a valid email",
-	"contact_form_phone": "Cellphone",
+	"contact_form_phone": "PhoneNumber",
 	"contact_form_phone_placeholder": "(00) 00000-0000",
 	"contact_form_message": "Subject",
 	"contact_form_message_placeholder": "Describe the subject...",
@@ -51,6 +51,9 @@
 
 	"modal_error_title": "Something went wrong :/",
 	"modal_error_default_message": "Please try again later!",
+
+	"modal_success_title": "Success!",
+	"modal_success_sent": "Email sent successfully!",
 
 	"scroll_up_message": "Oh, hello. I’ll stay here to enjoy the sun.",
 

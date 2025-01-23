@@ -2,7 +2,9 @@ import { fail } from '@sveltejs/kit';
 import nodemailer from 'nodemailer'
 import { config } from 'dotenv';
 
-import { contactSchema } from '../components/layout/contact/contact.schema.js';
+import * as m from '$lib/paraglide/messages.js';
+
+import { createContactSchema } from '../components/layout/contact/contact.schema.js';
 
 config()
 export const actions = {
@@ -15,7 +17,7 @@ export const actions = {
       about: formData.get('about')
     };
 
-    const result = contactSchema.safeParse(data);
+    const result = createContactSchema(m).safeParse(data);
     
     if (!result.success) {      
       return fail(400, {
@@ -71,7 +73,8 @@ export const actions = {
 
       return {
         success: true,
-        data: result.data
+        data: result.data,
+        server: m.modal_success_sent()
       };
 
     } catch (error) {

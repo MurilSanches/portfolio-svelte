@@ -52,6 +52,9 @@
 	"modal_error_title": "Algo deu errado :/",
 	"modal_error_default_message": "Tente novamente mais tarde!",
 
+	"modal_success_title": "Sucesso!",
+	"modal_success_sent": "E-mail enviado com sucesso!",
+
 	"scroll_up_message":"Oh, olá. Eu ficarei aqui, para apreciar o sol.",
 
 	"copyright": "Feito por {name}. Todos os direitos reservados.",

@@ -3,6 +3,7 @@
 
 	import Input from '../../input/Input.svelte';
 	import TextArea from '../../input/TextArea.svelte';
+	import InputMask from '../../input/InputMask.svelte';
 
 	const { form } = $props();
 </script>
@@ -14,12 +15,9 @@
 	<Input
 		name="name"
 		value={form?.data?.name ?? ''}
-		errors={!!form?.errors?.name}
+		errors={form?.errors?.name}
 		placeholder={m.contact_form_name_placeholder()}
 	/>
-	{#if form?.errors?.name}
-		<span class="mt-2 text-sm text-red-600">{form.errors.name[0]}</span>
-	{/if}
 </div>
 
 <div>
@@ -30,27 +28,22 @@
 		name="email"
 		type="email"
 		value={form?.data?.email ?? ''}
-		errors={!!form?.errors?.email}
+		errors={form?.errors?.email}
 		placeholder={m.contact_form_email_placeholder()}
 	/>
-	{#if form?.errors?.email}
-		<span class="mt-2 text-sm text-red-600">{form.errors.email[0]}</span>
-	{/if}
 </div>
 
 <div>
 	<label for="phone" class="text-black block font-semibold dark:text-white">
 		{m.contact_form_phone()}
 	</label>
-	<Input
+	<InputMask
 		name="phone"
 		value={form?.data?.phone ?? ''}
-		errors={!!form?.errors?.phone}
+		errors={form?.errors?.phone}
 		placeholder={m.contact_form_phone_placeholder()}
+		options={{ lazy: true, mask: '(00) 00000-0000' }}
 	/>
-	{#if form?.errors?.phone}
-		<span class="mt-2 text-sm text-red-600">{form.errors.phone[0]}</span>
-	{/if}
 </div>
 
 <div>
@@ -60,12 +53,9 @@
 	<TextArea
 		name="about"
 		value={form?.data?.about ?? ''}
-		errors={!!form?.errors?.about}
+		errors={form?.errors?.about}
 		placeholder={m.contact_form_message_placeholder()}
 	/>
-	{#if form?.errors?.about}
-		<span class="mt-2 text-sm text-red-600">{form.errors.about[0]}</span>
-	{/if}
 </div>
 
 {#if form?.errors?.server}
