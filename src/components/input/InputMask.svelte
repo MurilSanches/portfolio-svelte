@@ -5,6 +5,7 @@
 		name = '',
 		type = 'text',
 		value = '',
+		defaultValue = '',
 		placeholder = '',
 		errors = null,
 		options = { lazy: false, mask: '' }
@@ -18,6 +19,7 @@
 		{name}
 		{type}
 		{value}
+		{defaultValue}
 		{placeholder}
 		id={name}
 		aria-labelledby={name}

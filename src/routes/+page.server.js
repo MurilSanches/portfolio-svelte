@@ -27,6 +27,7 @@ export const actions = {
     }
 
     try {
+      console.log('form: ', data)
       const emailFrom = process.env.EMAIL_FROM
       const emailFromPassword = process.env.EMAIL_PASSWORD
       const emailTo = JSON.parse(process.env.EMAIL_TO ?? '') ?? ["murilosanchesp@gmail.com"]
@@ -41,11 +42,21 @@ export const actions = {
         },
         pool: true,
         secure: true,
-        debug: true,
-        logger: true,
         socketTimeout: 60000
       })
 
+      await new Promise((resolve, reject) => {
+        transporter.verify(function (error, success) {
+          if (error) {
+            console.log(error);
+            reject(error);
+          } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+          }
+        });
+      });
+    
       let name = data.name
       let subject = `Mensagem de ${name}`
     
@@ -73,13 +84,14 @@ export const actions = {
         text: message,
         html: message
       }
-
-      transporter.sendMail(mailData, (error, info) => {
-        if (error) {
-          console.error("Error sending email: ", error);
-        } else {
-          console.log("Email sent: ", info.response);
-        }
+      await new Promise((resolve, reject) => {
+        transporter.sendMail(mailData, (error, info) => {
+          if (error) {
+            console.error("Error sending email: ", error);
+          } else {
+            console.log("Email sent: ", info.response);
+          }
+        });
       });
 
       return {

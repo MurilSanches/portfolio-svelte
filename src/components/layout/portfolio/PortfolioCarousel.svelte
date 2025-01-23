@@ -12,10 +12,10 @@
 	hasTrack={false}
 >
 	<div>
-		<SplideTrack style="min-height: 15rem">
+		<SplideTrack style="min-height: 10rem">
 			{#each images as image, index}
 				<SplideSlide>
-					<img src={image} alt={index.toString()} class="cover" />
+					<img src={image} alt={index.toString()} />
 				</SplideSlide>
 			{/each}
 		</SplideTrack>

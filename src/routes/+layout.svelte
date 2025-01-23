@@ -36,7 +36,7 @@
 		property="og:description"
 		content="Discover more about web development projects by Murilo Sanches."
 	/>
-	<meta property="og:image" content="/og-image.jpg" />
+	<meta property="og:image" content="/bornfire_light.gif" />
 	<meta property="og:url" content="https://muriloporfolio.com.br" />
 	<meta property="og:type" content="website" />
 </svelte:head>

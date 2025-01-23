@@ -1,5 +1,12 @@
 <script>
-	const { name = '', type = 'text', value = '', placeholder = '', errors = null } = $props();
+	const {
+		name = '',
+		type = 'text',
+		value = '',
+		defaultValue = '',
+		placeholder = '',
+		errors = null
+	} = $props();
 
 	let errorClass = $derived(!!errors ? 'error' : '');
 </script>
@@ -9,6 +16,7 @@
 		{name}
 		{type}
 		{value}
+		{defaultValue}
 		{placeholder}
 		id={name}
 		aria-labelledby={name}

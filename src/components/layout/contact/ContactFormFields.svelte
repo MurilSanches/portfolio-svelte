@@ -5,7 +5,7 @@
 	import TextArea from '../../input/TextArea.svelte';
 	import InputMask from '../../input/InputMask.svelte';
 
-	const { form } = $props();
+	const { form, name, email, phonenumber, subject } = $props();
 </script>
 
 <div>
@@ -14,7 +14,7 @@
 	</label>
 	<Input
 		name="name"
-		value={form?.data?.name ?? ''}
+		defaultValue={name}
 		errors={form?.errors?.name}
 		placeholder={m.contact_form_name_placeholder()}
 	/>
@@ -27,7 +27,7 @@
 	<Input
 		name="email"
 		type="email"
-		value={form?.data?.email ?? ''}
+		defaultValue={email}
 		errors={form?.errors?.email}
 		placeholder={m.contact_form_email_placeholder()}
 	/>
@@ -39,7 +39,7 @@
 	</label>
 	<InputMask
 		name="phone"
-		value={form?.data?.phone ?? ''}
+		defaultValue={phonenumber}
 		errors={form?.errors?.phone}
 		placeholder={m.contact_form_phone_placeholder()}
 		options={{ lazy: true, mask: '(00) 00000-0000' }}
@@ -52,7 +52,7 @@
 	</label>
 	<TextArea
 		name="about"
-		value={form?.data?.about ?? ''}
+		value={subject}
 		errors={form?.errors?.about}
 		placeholder={m.contact_form_message_placeholder()}
 	/>

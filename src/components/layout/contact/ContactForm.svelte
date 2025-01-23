@@ -7,17 +7,25 @@
 
 	import ContactFormFields from './ContactFormFields.svelte';
 	let form = $state(undefined);
-	let submitting = $state(false);
 
-	const clearForm = () => {
-		if (form) {
-			form = undefined;
-		}
-	};
+	let name = $state('');
+	let email = $state('');
+	let phonenumber = $state('');
+	let subject = $state('');
+
+	let submitting = $state(false);
 
 	const handleSubmit = () => {
 		submitting = true;
 		return handleResult;
+	};
+
+	const clearForm = () => {
+		form = undefined;
+		name = '';
+		email = '';
+		phonenumber = '';
+		subject = '';
 	};
 
 	const handleResult = async ({ result }) => {
@@ -40,7 +48,7 @@
 	use:enhance={handleSubmit}
 	class="mx-auto w-full justify-center space-y-4 rounded-lg bg-blue-extraLight p-6 shadow-md dark:bg-gray-dark"
 >
-	<ContactFormFields {form} />
+	<ContactFormFields {form} {name} {email} {phonenumber} {subject} />
 	<div class="flex w-full justify-center">
 		<button
 			type="submit"

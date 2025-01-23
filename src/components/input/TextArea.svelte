@@ -1,5 +1,5 @@
 <script>
-	const { name = '', value = '', placeholder = '', errors = null } = $props();
+	const { name = '', value = '', defaultValue = '', placeholder = '', errors = null } = $props();
 
 	let errorClass = $derived(!!errors ? 'error' : '');
 </script>
@@ -8,6 +8,7 @@
 	<textarea
 		{name}
 		{value}
+		{defaultValue}
 		{placeholder}
 		id={name}
 		aria-labelledby={name}
