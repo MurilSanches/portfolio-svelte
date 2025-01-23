@@ -36,7 +36,7 @@ export const actions = {
         host: "smtp.gmail.com",
         port: 465,
         auth: {
-          user: emailFrom,
+          user: "muriloenviadordeemails@gmail.com",
           pass: emailFromPassword
         },
         secure: true,
@@ -66,7 +66,7 @@ export const actions = {
 
       const mailList = [...emailTo]
       const mailData = {
-        from: emailFrom,
+        from: "muriloenviadordeemails@gmail.com",
         to: mailList,
         subject: subject,
         text: message,
