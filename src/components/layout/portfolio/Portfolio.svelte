@@ -49,7 +49,7 @@
 							rel="noopener noreferrer"
 							class="flex w-28 items-center gap-x-2 rounded-md bg-cyan-600 px-4 py-2 text-sm font-medium uppercase text-white shadow hover:bg-cyan-500"
 						>
-							Acessar
+							GitHub
 							<ExternalLink class="" />
 						</a>
 					</div>
@@ -67,7 +67,7 @@
 		{#if github}
 			<github.Component size="16" />
 		{/if}
-		Ver mais
+		{m.portfolio_view_all()}
 		<ChevronRight size="16" />
 	</a>
 </section>

@@ -17,6 +17,7 @@
 	"portfolio_title": "Portfólio",
 	"portfolio_next_desc": "Uma PoC para treinar o Next.js, com foco em requisições do lado do servidor e do cliente.",
 	"portfolio_poizoni_desc": "Aplicativo para identificar animais peçonhentos e indicar a melhor maneira de tratá-los.",
+	"portfolio_view_all": "Ver mais",
 
 	"experience_title": "Experiência",
 	"experience_1_desc": "Desenvolvimento front-end em React JS/TS, Vite e NEXT JS. Suporte à equipe de estagiários.",
@@ -56,6 +57,9 @@
 	"modal_success_sent": "E-mail enviado com sucesso!",
 
 	"scroll_up_message":"Oh, olá. Eu ficarei aqui, para apreciar o sol.",
+
+	"error_message": "Algo deu errado!",
+	"error_button": "Tente novamente",
 
 	"copyright": "Feito por {name}. Todos os direitos reservados.",
 	"copyright_ds3": "Este portfólio utiliza elementos inspirados em *Dark Souls 3*, uma obra da FromSoftware e Bandai Namco Entertainment. Todos os direitos pertencem aos seus respectivos proprietários."
