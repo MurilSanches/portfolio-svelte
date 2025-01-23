@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 const createDarkModeStore = () => {
   const storedValue = typeof window !== 'undefined' 
     ? localStorage.getItem('darkMode') === 'true'
-    : false;
+    : true;
 
   const { subscribe, set, update } = writable(storedValue);
 

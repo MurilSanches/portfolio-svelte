@@ -1,12 +1,18 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	
+	"title_name": "Desenvolvedor Web",
+	
 	"about_description": "Desenvolvedor Front-end com mais de 4 anos de experiência. Apaixonado por resolver desafios complexos com soluções inovadoras e eficientes, sempre focado na entrega de projetos de alto desempenho e impacto.",			
+	
 	"menu_about": "Sobre",
 	"menu_projects": "Projetos",
 	"menu_experience": "Experiência",
 	"menu_education": "Educação",
 	"menu_contact": "Contatos",
 	"menu_skills": "Habilidades",
+
+	"header_resume": "Currículo",
 	
 	"portfolio_title": "Portfólio",
 	"portfolio_next_desc": "Uma PoC para treinar o Next.js, com foco em requisições do lado do servidor e do cliente.",
@@ -26,7 +32,23 @@
 	"education_2_course": "Ensino médio e técnico em informática",
 
 	"skills_title": "Habilidades",
+
+	"resume_title": "CONFIRA MEU CURRÍCULO!",
+	"resume_button": "Currículo",
+
 	"contact_title": "Contato",
-	"copyright": "Feito por {name}. Todos os direitos reservados."
+	"contact_form_name": "Nome",
+	"contact_form_name_placeholder": "Nome Completo",
+	"contact_form_email": "E-mail",
+	"contact_form_email_placeholder": "seu@email.com",
+	"contact_form_phone": "Telefone",
+	"contact_form_phone_placeholder": "(00) 00000-0000",
+	"contact_form_message": "Assunto",
+	"contact_form_message_placeholder": "Descreva o assunto...",
+
+	"scroll_up_message":"Oh, olá. Eu ficarei aqui, para apreciar o sol.",
+
+	"copyright": "Feito por {name}. Todos os direitos reservados.",
+	"copyright_ds3": "Este portfólio utiliza elementos inspirados em *Dark Souls 3*, uma obra da FromSoftware e Bandai Namco Entertainment. Todos os direitos pertencem aos seus respectivos proprietários."
 }
 	

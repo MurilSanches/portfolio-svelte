@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	import Mail from 'lucide-svelte/icons/mail';
 	import Phone from 'lucide-svelte/icons/phone';
 

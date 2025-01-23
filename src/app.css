@@ -5,3 +5,17 @@
 .body {
     padding: 0;
 }
+
+@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('/src/fonts/OptimusPrinceps.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MinhaFonte';
+    src: url('/src/fonts/mOptimusPrincepsSemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }

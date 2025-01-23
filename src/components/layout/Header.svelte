@@ -1,4 +1,6 @@
 <script>
+	import * as m from '$lib/paraglide/messages.js';
+
 	import { onMount } from 'svelte';
 
 	import Menu from 'lucide-svelte/icons/menu';
@@ -21,12 +23,10 @@
 	let isMenuOpen = false;
 	let isScrolled = false;
 
-	// Listener de scroll
 	const handleScroll = () => {
 		isScrolled = window.scrollY > 0;
 	};
 
-	// Adicionar e remover o listener quando o componente monta/desmonta
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => {
@@ -42,7 +42,6 @@
 	class:dark:bg-gray-dark={isScrolled}
 	class:shadow-md={isScrolled}
 >
-	<!-- Dark Mode Toggle -->
 	<button
 		class="text-2xl font-bold text-white dark:text-gray-300"
 		onclick={() => darkMode.toggle()}
@@ -54,7 +53,6 @@
 		{/if}
 	</button>
 
-	<!-- Menu Button (Mobile) -->
 	<button
 		class="block h-6 w-6 text-blue-light dark:text-blue-extraLight md:hidden"
 		onclick={() => (isMenuOpen = !isMenuOpen)}
@@ -62,27 +60,27 @@
 		<Menu class="h-6 w-6" />
 	</button>
 
-	<!-- Navigation Menu (Desktop) -->
-	<nav class="hidden space-x-6 md:flex">
+	<nav class="hidden justify-center space-x-6 self-center md:flex">
 		{#each menu_items as item}
 			<button
 				onclick={() => scrollToSection(item.id)}
-				class="hover:text-gray-dark dark:text-blue-extraLight dark:hover:text-gray-dark"
+				class="uppercase hover:text-gray-dark dark:text-blue-extraLight dark:hover:text-cyan-500"
 				class:text-blue-extraLight={!isScrolled}
+				class:dark:hover:text-gray-dark={!isScrolled}
 				class:text-blue-light={isScrolled}
-				class:dark:hover:text-cyan-500={isScrolled}
 			>
 				{item.label()}
 			</button>
 		{/each}
 	</nav>
 
-	<!-- Right Section -->
 	<div class="hidden items-center justify-center gap-x-4 md:flex">
 		<button
-			class="rounded-lg bg-gray-dark px-4 py-2 text-white hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-500"
+			class="rounded-lg px-4 py-2 text-white hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-500"
+			class:bg-cyan-600={!isScrolled}
+			class:bg-gray-dark={isScrolled}
 		>
-			Resume
+			{m.header_resume()}
 		</button>
 		<button onclick={() => switchToLanguage(LANGUAGES.EN)} type="button">
 			<img src={USAFlag} alt="Bandeira USA" class="h-6 w-8" />

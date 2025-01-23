@@ -19,6 +19,14 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	<title>Murilo Portfolio</title>
+	<meta
+		name="description"
+		content="Create a Svelte action that adds easy tooltips to any HTML element."
+	/>
+</svelte:head>
+
 <ParaglideJS {i18n}>
 	<div class="relative h-full">
 		<Header />

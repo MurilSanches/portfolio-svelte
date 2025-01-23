@@ -1,12 +1,18 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",	
+
+	"title_name": "Web Developer",
+
 	"about_description": "Front-end developer with over 4 years of experience. Passionate about solving complex challenges with innovative and efficient solutions, always focused on delivering high-performance and impactful projects.",
+	
 	"menu_about": "About me",
 	"menu_projects": "Portfolio",
 	"menu_experience": "Experience",
 	"menu_education": "Education",
 	"menu_contact": "Contact me",
 	"menu_skills": "Skills",
+
+	"header_resume": "Resume",
 
 	"portfolio_title": "Portfolio",
 	"portfolio_next_desc": "A PoC to practice Next.js, focusing on server-side and client-side requests.",
@@ -27,8 +33,21 @@
 
 	"skills_title": "Skills",
 
-	"contact_title": "Contact me",
-	
+	"resume_title": "CHECK OUT MY RÉSUMÉ!",
+	"resume_button": "Grab A Copy",
 
-	"copyright": "Made by {name}. All rights reserved."
+	"contact_title": "Contact me",
+	"contact_form_name": "Name",
+	"contact_form_name_placeholder": "Full name",
+	"contact_form_email": "E-mail",
+	"contact_form_email_placeholder": "your@email.com",
+	"contact_form_phone": "Cellphone",
+	"contact_form_phone_placeholder": "(00) 00000-0000",
+	"contact_form_message": "Subject",
+	"contact_form_message_placeholder": "Describe the subject...",
+
+	"scroll_up_message": "Oh, hello. I’ll stay here to enjoy the sun.",
+
+	"copyright": "Made by {name}. All rights reserved.",
+	"copyright_ds3": "This portfolio uses elements inspired by Dark Souls 3, a work by FromSoftware and Bandai Namco Entertainment. All rights belong to their respective owners."
 }

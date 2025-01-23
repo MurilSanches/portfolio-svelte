@@ -23,5 +23,8 @@
 			&copy; {currentYear}
 			{m.copyright({ name: 'Murilo Sanches de Paula' })}
 		</p>
+		<p class="text-sm text-white">
+			{m.copyright_ds3()}
+		</p>
 	</div>
 </footer>

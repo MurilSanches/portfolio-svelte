@@ -5,21 +5,14 @@
 	import Experience from '../components/layout/experience/Experience.svelte';
 	import Portfolio from '../components/layout/portfolio/Portfolio.svelte';
 	import Resume from '../components/layout/resume-copy/Resume.svelte';
+	import ScrollUpIcon from '../components/layout/scroll-up-icon/ScrollUpIcon.svelte';
 	import Skills from '../components/layout/skills/Skills.svelte';
-
-	let bgImage2 = '/snowy-ariandel.jpg';
+	import Background from '../components/layout/background/Background.svelte';
 </script>
 
 <div class="flex flex-col items-center justify-center bg-white dark:bg-black-dark">
-	<section
-		class="absolute top-0 flex h-[80vh] w-full flex-col items-center justify-center bg-cover bg-fixed bg-center"
-		style={`background-image: url(${bgImage2})`}
-	>
-		<div class="z-9 absolute inset-0 h-full w-full bg-[#000] bg-opacity-30"></div>
-		<h2 class="z-10 mb-4 text-6xl font-semibold text-white">MURILO SANCHES</h2>
-		<span class="z-10 text-base text-white">Web Developer</span>
-	</section>
-	<div class="mt-[70vh] flex w-full flex-col gap-y-16 px-8 pb-16 md:w-4/5 md:px-0">
+	<Background />
+	<div class="mt-[90vh] flex w-full flex-col gap-y-16 px-8 pb-16 md:mt-[70vh] md:w-4/5 md:px-0">
 		<About />
 		<Portfolio />
 		<Experience />
@@ -27,7 +20,8 @@
 		<Skills />
 	</div>
 	<Resume />
-	<div class="flex w-full flex-col gap-y-16 px-8 pb-16 md:w-4/5 md:px-0">
+	<div class="flex w-full flex-col gap-y-16 px-4 pb-16 md:w-4/5 md:px-0">
 		<Contact />
 	</div>
+	<ScrollUpIcon />
 </div>

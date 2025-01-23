@@ -1,18 +1,13 @@
-- Ajustar header mobile
-
- - Ajustar icone e titulo da aba
-
  - Rever layout com brunao
 
  - Foto Minha
  - Mask no campo de telefone
- - User guide
-
  - Imagens do POIZONI
-
 
 -  Ajustar formulario
 
+- Tooltip no icone para scroll upp
+
  - Criar modal de envio cxom sucesso
 
- - Ajustar SES - Simples Email Sender
+ - Ajustar nodemailer
