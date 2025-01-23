@@ -40,7 +40,9 @@ export const actions = {
           user: emailFrom,
           pass: emailFromPassword
         },
-        secure: true
+        secure: true,
+        debug: true, // Ativa logs detalhados
+        logger: true, // Mostra os logs do Nodemailer
       })
 
       let name = data.name
