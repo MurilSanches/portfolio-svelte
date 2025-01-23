@@ -16,7 +16,7 @@
 		<span class="text-cyan-600">{m.portfolio_title()}</span>
 	</h1>
 
-	<div class="grid grid-cols-1 gap-y-8 md:grid-cols-2">
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 		{#each projects as project}
 			<div
 				class="group cursor-pointer space-y-4 overflow-hidden rounded-lg border border-gray-700 bg-white shadow-md transition-transform duration-300 hover:scale-105 dark:bg-gray-800"
