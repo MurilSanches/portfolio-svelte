@@ -15,7 +15,7 @@
 		<SplideTrack style="min-height: 10rem">
 			{#each images as image, index}
 				<SplideSlide>
-					<img src={image} alt={index.toString()} />
+					<img src={image} alt={index.toString()} class="h-auto max-h-64 w-full object-contain" />
 				</SplideSlide>
 			{/each}
 		</SplideTrack>

@@ -42,7 +42,7 @@
 </svelte:head>
 
 <ParaglideJS {i18n}>
-	<div class="relative h-screen">
+	<div class="relative h-full">
 		<Header />
 		{@render children()}
 		<Footer />

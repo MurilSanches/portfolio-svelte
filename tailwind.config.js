@@ -26,7 +26,8 @@ export default {
 					dark: '#171E27'
 				},
 				brown: {
-					base: '#723F33'
+					base: '#723F33',
+					dark: '#856652'
 				}
 			},
 			animation: {

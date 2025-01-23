@@ -19,9 +19,8 @@ export let projects = [
             m.portfolio_poizoni_desc,
         repo: 'https://github.com/ivanknobel/poizoni',
         images: [
-            '/portfolio/next-page-1.png',
-            '/portfolio/next-page-2.png',
-            '/portfolio/next-page-3.png'
+            '/portfolio/poizoni-page-2.png',
+            '/portfolio/poizoni-page-3.png',           
         ],
         tags: ['Flutter', 'Mobile', 'Geolocalização']
     }
