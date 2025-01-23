@@ -30,19 +30,18 @@ export const actions = {
       const emailFrom = process.env.EMAIL_FROM
       const emailFromPassword = process.env.EMAIL_PASSWORD
       const emailTo = JSON.parse(process.env.EMAIL_TO ?? '') ?? ["murilosanchesp@gmail.com"]
-
-      console.log(emailFrom, emailFromPassword, emailTo)
-
+    
       const transporter = nodemailer.createTransport({
-        port: 465,
+        service: "Gmail",
         host: "smtp.gmail.com",
+        port: 465,
         auth: {
           user: emailFrom,
           pass: emailFromPassword
         },
         secure: true,
-        debug: true, // Ativa logs detalhados
-        logger: true, // Mostra os logs do Nodemailer
+        debug: true,
+        logger: true,
         socketTimeout: 60000
       })
 
@@ -74,13 +73,13 @@ export const actions = {
         html: message
       }
 
-      transporter.sendMail(mailData,  (err, info) => {
-        if (err) {
-          console.log(err)
+      transporter.sendMail(mailData, (error, info) => {
+        if (error) {
+          console.error("Error sending email: ", error);
         } else {
-          console.log(info)
+          console.log("Email sent: ", info.response);
         }
-      })
+      });
 
       return {
         success: true,
