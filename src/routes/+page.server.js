@@ -43,6 +43,7 @@ export const actions = {
         secure: true,
         debug: true, // Ativa logs detalhados
         logger: true, // Mostra os logs do Nodemailer
+        socketTimeout: 60000
       })
 
       let name = data.name
