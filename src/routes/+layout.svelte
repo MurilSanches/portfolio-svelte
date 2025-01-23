@@ -1,4 +1,5 @@
 <script>
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { i18n } from '$lib/i18n';
 	import { darkMode } from '$lib/stores/darkMode';
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
@@ -9,6 +10,8 @@
 	import Footer from '../components/layout/Footer.svelte';
 
 	import '../app.css';
+
+	injectSpeedInsights();
 
 	onMount(() => {
 		if ($darkMode) {
