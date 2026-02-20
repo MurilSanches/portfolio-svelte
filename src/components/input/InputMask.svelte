@@ -1,5 +1,5 @@
 <script>
-	import { imask } from '@imask/svelte';
+	import { imask } from 'svelte-imask';
 
 	const {
 		name = '',

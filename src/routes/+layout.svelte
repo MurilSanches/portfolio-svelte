@@ -1,5 +1,6 @@
 <script>
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 
 	import { i18n } from '$lib/i18n';
@@ -14,6 +15,7 @@
 	import '../app.css';
 
 	injectSpeedInsights();
+	injectAnalytics();
 
 	onMount(() => {
 		if ($darkMode) {
@@ -47,5 +49,6 @@
 		{@render children()}
 		<Footer />
 		<Toaster />
+
 	</div>
 </ParaglideJS>
