@@ -6,6 +6,7 @@
 
 	import Menu from 'lucide-svelte/icons/menu';
 	import { darkMode } from '$lib/stores/darkMode';
+	import { base } from '$app/paths';
 
 	import { switchToLanguage } from '../../utils/switchToLanguage';
 	import { menu_items } from '../../data/menu';
@@ -16,11 +17,11 @@
 	import MobileMenu from './menu/MobileMenu.svelte';
 	import MenuOverlay from './menu/MenuOverlay.svelte';
 
-	let bornfire = '/bornfire.png';
-	let light_bornfire = '/bornfire_light.gif';
+	let bornfire = `${base}/bornfire.png`;
+	let light_bornfire = `${base}/bornfire_light.gif`;
 
-	let USAFlag = '/flags/USA.png';
-	let BRFlag = '/flags/Brazil.png';
+	let USAFlag = `${base}/flags/USA.png`;
+	let BRFlag = `${base}/flags/Brazil.png`;
 
 	let isMenuOpen = false;
 	let isScrolled = false;

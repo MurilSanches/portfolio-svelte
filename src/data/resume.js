@@ -1,6 +1,7 @@
 import { LANGUAGES } from "../constants/languages";
+import { base } from '$app/paths';
 
 export const resume = {
-    [LANGUAGES.EN]: "/resume/english_resume.pdf",
-    [LANGUAGES.PT_BR]: "/resume/resume.pdf"
+    [LANGUAGES.EN]: `${base}/resume/english_resume.pdf`,
+    [LANGUAGES.PT_BR]: `${base}/resume/resume.pdf`
 }

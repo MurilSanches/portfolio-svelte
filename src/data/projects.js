@@ -1,5 +1,6 @@
 import * as m from '$lib/paraglide/messages.js';
-	
+import { base } from '$app/paths';
+
 export let projects = [
     {
         name: 'Treinando Next.js',
@@ -7,9 +8,9 @@ export let projects = [
             m.portfolio_next_desc,
         repo: 'https://github.com/MurilSanches/treinando-nextjs',
         images: [
-            '/portfolio/next-page-1.png',
-            '/portfolio/next-page-2.png',
-            '/portfolio/next-page-3.png'
+            `${base}/portfolio/next-page-1.png`,
+            `${base}/portfolio/next-page-2.png`,
+            `${base}/portfolio/next-page-3.png`
         ],
         tags: ['Next.js', 'SSR', 'API']
     },
@@ -19,8 +20,8 @@ export let projects = [
             m.portfolio_poizoni_desc,
         repo: 'https://github.com/ivanknobel/poizoni',
         images: [
-            '/portfolio/poizoni-page-2.png',
-            '/portfolio/poizoni-page-3.png',           
+            `${base}/portfolio/poizoni-page-2.png`,
+            `${base}/portfolio/poizoni-page-3.png`,
         ],
         tags: ['Flutter', 'Mobile', 'Geolocalização']
     }
