@@ -95,6 +95,13 @@
 		<button onclick={() => switchToLanguage(LANGUAGES.PT_BR)} type="button">
 			<img src={BRFlag} alt="Bandeira Brazil" class="h-6 w-8" />
 		</button>
+		<a
+			href="/v2"
+			class="rounded-md border border-cyan-500/50 px-3 py-1 text-sm text-cyan-400 transition-colors hover:border-cyan-400 hover:text-cyan-300 dark:border-cyan-400/40 dark:text-cyan-300"
+			title="Ver Portfolio v2"
+		>
+			v2 →
+		</a>
 	</div>
 </header>
 
